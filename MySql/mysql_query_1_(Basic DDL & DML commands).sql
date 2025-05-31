@@ -83,7 +83,7 @@ ALTER TABLE products
 add column new_id INT auto_increment primary key;
 
 -- inserting data in table
-insert into products (name,price) values ('abhay', 9.99), ('abha', 9.99), ('aman', 9);
+insert into products (name,price) values ('abha', 9.99);
 
 -- get all rows in products table
 select * from products;
@@ -98,8 +98,6 @@ add column coffee_origin varchar(30);
 -- delete column from products table
 alter table products
 drop column coffee_origin;
-
-
 
 
 
