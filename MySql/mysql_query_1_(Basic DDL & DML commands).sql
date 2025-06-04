@@ -21,7 +21,7 @@ drop database test_db;
 -- truncate -> clear out the contents of a table. effectively the same as deleting and re-creating the table.
 
 -- DML commands
--- select - Query the database to reterive rows of data.
+-- select - Query the database to retrieve rows of data.
 -- insert - insert data into a table.
 -- update - change the data in columns of a table (or tables).
 -- delete - delete rows in a table (or tables).
@@ -30,7 +30,7 @@ drop database test_db;
 -- key -> identifier for a row in a table.
 -- index -> ordered collection of keys. used to allow fast searching and when sorting the rows.
 -- unique -> every row has a different key, or every entry in an index only appears once.
--- synonyms -> in mysql, the keywords INDEX and KEY are used interchangebly.
+-- synonyms -> in mysql, the keywords INDEX and KEY are used interchangeably.
 
 -- primary key
 -- primary key -> a column (or set of columns) that uniquely identifies a row within a table.
@@ -83,7 +83,8 @@ ALTER TABLE products
 add column new_id INT auto_increment primary key;
 
 -- inserting data in table
-insert into products (name,price) values ('abha', 9.99);
+insert into products (name,price,coffee_origin) values ('abhay', 9.08, 'abc'),('abha', 9.99, '123');
+insert into products (name,price) values ('abhay', 9.08),('abha', 9.99);
 
 -- get all rows in products table
 select * from products;
@@ -99,17 +100,17 @@ add column coffee_origin varchar(30);
 alter table products
 drop column coffee_origin;
 
+-- Always check for non-numeric data before converting
+SELECT * FROM products WHERE coffee_origin REGEXP '[^0-9]';
 
+-- change datatype of a new added column
+alter table products
+modify column coffee_origin int; 
 
-
-
-
-
-
-
-
-
-
+-- change datatype of a new added column with auto_increment
+alter table products
+modify column coffee_origin int auto_increment,
+add primary key (coffee_origin);
 
 
 

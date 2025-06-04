@@ -71,6 +71,7 @@ ALTER TABLE users
 ADD CONSTRAINT pk_users PRIMARY KEY (new_id);
 
 -- inserting data in table
+insert into products (name,price,coffee_origin) values ('abhay', 9.08, 'abc'),('abha', 9.99, '123'),('aman', 9.99, '-'),('rohit', 9.99, '$');
 insert into products (name,price) values ('abhay', 9.08),('abha', 9.99);
 
 -- get all rows in products table
@@ -89,13 +90,13 @@ exec sp_help products;
 alter table products
 add coffee_origin varchar(30);
 
+-- Always check for non-numeric data before converting
+SELECT * FROM products WHERE TRY_CAST(coffee_origin AS INT) IS NOT NULL; -- OR
+
 -- delete column from products table
 alter table products
 drop column coffee_origin;
 
-
-
-
-
-
-
+-- change datatype of a new added column
+alter table products
+alter column coffee_origin int;
