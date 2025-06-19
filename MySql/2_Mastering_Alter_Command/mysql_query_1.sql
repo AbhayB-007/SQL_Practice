@@ -24,15 +24,17 @@ CREATE TABLE pets (
 
 show tables;
 
--- SQL  to add a primary key to a table.
-ALTER TABLE <table name>
-ADD PRIMARY KEY (<column name>);
+-- SQL to add a primary key to a table.
+-- ALTER TABLE <table name>
+-- ADD PRIMARY KEY (<column name>);
  
 -- SQL to remove a primary key from a table.
-ALTER TABLE <table name>
-DROP PRIMARY KEY;
+-- ALTER TABLE <table name>
+-- DROP PRIMARY KEY;
 
 DESCRIBE addresses;
+DESCRIBE people;
+DESCRIBE pets;
 
 ALTER TABLE addresses
 ADD PRIMARY KEY (id);
@@ -41,12 +43,8 @@ ALTER TABLE addresses
 DROP PRIMARY KEY;
 
 ALTER TABLE addresses
-MODIFY id int;
+MODIFY id int not null auto_increment;
 
-DESCRIBE people;
-
-ALTER TABLE people
-ADD PRIMARY KEY (id);
 
 
 
