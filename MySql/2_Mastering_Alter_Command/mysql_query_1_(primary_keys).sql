@@ -24,26 +24,22 @@ CREATE TABLE pets (
 
 show tables;
 
--- SQL to add a primary key to a table.
--- ALTER TABLE <table name>
--- ADD PRIMARY KEY (<column name>);
- 
--- SQL to remove a primary key from a table.
--- ALTER TABLE <table name>
--- DROP PRIMARY KEY;
-
 DESCRIBE addresses;
 DESCRIBE people;
 DESCRIBE pets;
 
+-- SQL to add a primary key to a table.
+-- also it automatically make the column not null if its nullable
 ALTER TABLE addresses
 ADD PRIMARY KEY (id);
 
+-- SQL to remove a primary key from a table.
 ALTER TABLE addresses
 DROP PRIMARY KEY;
 
+-- make id column nullable
 ALTER TABLE addresses
-MODIFY id int not null auto_increment;
+MODIFY id int null;
 
 
 
