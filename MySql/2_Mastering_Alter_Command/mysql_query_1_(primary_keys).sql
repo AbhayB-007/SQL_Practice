@@ -1,3 +1,4 @@
+USE;
 CREATE DATABASE test;
 USE test;
 

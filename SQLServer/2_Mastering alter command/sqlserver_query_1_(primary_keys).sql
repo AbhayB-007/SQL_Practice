@@ -37,8 +37,3 @@ ALTER TABLE addresses
 DROP CONSTRAINT PK_people_id;
 
 
-
-
-
-
-
