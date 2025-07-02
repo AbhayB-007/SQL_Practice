@@ -10,11 +10,16 @@ USE test;
 -- DROP INDEX <constraint name>;
  
 SELECT * from sys.tables;
-EXEC sp_help 'pets';
+SELECT * from pets;
 
+-- Adding unique constraint
 ALTER TABLE pets
 ADD CONSTRAINT u_species UNIQUE (species);
 
+-- Droping unique constraint
 ALTER TABLE pets
 DROP INDEX u_species;
 
+-- Trying & testing by inserting duplicate values
+insert into pets (id,name,species,owner_id) values 
+(3,'dog','Husky',300);
