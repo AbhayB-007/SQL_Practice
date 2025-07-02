@@ -3,7 +3,7 @@ USE test;
 /* 
 -- How to add a foreign key to a table
 ALTER TABLE <table name>
-ADD CONSTRAINT <constraint name> (or this can be removed in case if u want to auto generate foreign key constraint)
+ADD CONSTRAINT <constraint name> --> explanation: or this can be removed in case if u want to auto generate foreign key constraint
 FOREIGN KEY (<column name>) REFERENCES <table name>(<column name>);
  
 -- How to remove a foreign key from a table
@@ -28,8 +28,8 @@ CREATE TABLE employees (
     CONSTRAINT fk_employees_departments 
         FOREIGN KEY (department_id) 
         REFERENCES departments(department_id)
-        ON DELETE CASCADE --> if a department is deleted, its related employees are deleted too.
-        ON UPDATE CASCADE --> if a department_id changes, it propagates to employees.
+        ON DELETE CASCADE --> explanation: if a department is deleted, its related employees are deleted too.
+        ON UPDATE CASCADE --> explanation: if a department_id changes, it propagates to employees.
 );
 
 --2). Without Naming the Constraint (auto-generated name)
