@@ -9,7 +9,8 @@ USE test;
 -- ALTER TABLE <table name>
 -- DROP INDEX <constraint name>;
  
-DESCRIBE pets;
+SELECT * from sys.tables;
+EXEC sp_help 'pets';
 
 ALTER TABLE pets
 ADD CONSTRAINT u_species UNIQUE (species);
