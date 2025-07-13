@@ -1,0 +1,36 @@
+--1). what is normalization?
+-- normalization is the process of efficiently organizing data in a database to reduce redundancy and improve data integrity.
+
+--2). why is normalization?
+    --a). to eliminate redundant data.
+    --b). to only store related data in the same table.
+
+--3). Benefits of normalization:
+    --a). reduces storage space.
+    --b). reduce insert, update, and delete anomalies.
+    --c). improve query performance by organizing data logically.
+
+--4). Normalization forms:
+    --a). 1NF (First Normal Form): 
+        --i). eliminate duplicate columns from the same table.
+        --ii). create separate tables for each group of related data.
+        --iii). identify each row with a unique column or set of columns (primary key).
+    --b). 2NF (Second Normal Form):
+        --i). meet all requirements of 1NF.
+        --ii). remove subsets of data that apply to multiple rows and place them in separate tables.
+        --iii). create relationships between these new tables and their predecessors through foreign keys.
+    --c). 3NF (Third Normal Form):
+        --i). meet all requirements of 2NF.
+        --ii). remove columns that are not dependent on the primary key.
+    
+
+
+
+
+
+
+
+
+
+
+
