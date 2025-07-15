@@ -15,15 +15,13 @@
         --i). There are no repeated rows of data.
         --ii). columns only contain single value.
         --iii). The table has a primary key.
-
+        
     --b). 2NF (Second Normal Form):
         --i). meet all requirements of 1NF.
         --ii). every column that is not a primary key must be fully functionally dependent on the primary key.
-
     --c). 3NF (Third Normal Form):
         --i). meet all requirements of 2NF.
         --ii). remove columns that are not dependent on the primary key.
-        
     --#). Boyce/Codd Normal Form (BCNF) also called 3.5NF:
         --i). meet all requirements of 3NF.
         --ii). every determinant is a candidate key.
