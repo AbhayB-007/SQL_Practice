@@ -1,0 +1,2 @@
+-- Constraints in MySQL
+-- This script demonstrates how to create tables with various constraints in MySQL.
