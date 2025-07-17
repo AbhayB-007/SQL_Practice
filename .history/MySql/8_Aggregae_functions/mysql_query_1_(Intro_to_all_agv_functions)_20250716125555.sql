@@ -1,0 +1,5 @@
+-- What are aggregate functions in MYSQL?
+-- Aggregate functions are used to perform calculations on a set of values and return a single value.
+-- They are often used with the GROUP BY clause to group rows that have the same values in specified columns into summary rows.
+-- Common aggregate functions include:
+-- 1. COUNT() - Returns the number of rows that match a specified condition.

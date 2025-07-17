@@ -1,0 +1,2 @@
+-- What are aggregate functions in MYSQL?
+-- Aggregate functions are used to perform calculations on a set of values and return a single value.
